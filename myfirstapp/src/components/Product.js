@@ -1,9 +1,11 @@
 import "./Product.css";
-function Product() {
+function Product({ name, price }) {
+  // console.log(props);
   return (
     <div className="product">
-      <h3>samsung</h3>
-      <p>Rs 20000</p>
+      <h3>{name}</h3>
+      <p>Rs {price}</p>
+      {/* <pre>{JSON.stringify(props)}</pre> */}
     </div>
   );
 }

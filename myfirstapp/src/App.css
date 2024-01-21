@@ -1,11 +1,17 @@
 .App {
+  padding-block: 10px;
   text-align: center;
-  border: 5px solid red;
+  border: 1px solid red;
   background-color: gray;
 }
 .App > h2 {
-  border: 3px solid blue;
+  border: 1px solid blue;
 }
 .product {
   color: white;
+}
+.App button {
+  padding: 5px 20px;
+  text-transform: uppercase;
+  cursor: pointer;
 }
