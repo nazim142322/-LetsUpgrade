@@ -1,8 +1,8 @@
 import "./Product.css";
-import {useState} from "react";
+import { useState } from "react";
 function Product(props) {
-  const[isavailabe, setisavailabe]=useState('yes')
-  function myfun(){
+  const [isavailabe, setisavailabe] = useState("yes");
+  function myfun() {
     setisavailabe("no");
   }
   return (
@@ -10,8 +10,8 @@ function Product(props) {
       <h3>{props.name}</h3>
       <p>{props.price}</p>
       <p>{isavailabe}</p>
+      <span>Is availabe</span>
       <button onClick={myfun}>click</button>
-
     </div>
   );
 }
