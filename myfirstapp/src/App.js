@@ -1,11 +1,16 @@
 import "./App.css";
-function App() {
-  //let login;//false
-  //let login = "nazim";//true
-  //let login = 0; //false
-  let login = 1; //true
+import {useState} from 'react';
 
-  return <div className="App">{login ? <h1>true</h1> : <h1>false</h1>}</div>;
+function App() {
+  let [name, setName] = useState('')
+
+  return (
+  < div className="App">
+      <h4>Enter your name</h4>
+     {/* <input type='text' onInput={(event)=>{ console.log(event.target.value) }}/>   */}
+     <input type='text' onInput={(event)=>{ setName(event.target.value) }} value={name}/>   
+     
+  </div>)
 }
 
 export default App;

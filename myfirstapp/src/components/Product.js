@@ -1,11 +1,17 @@
 import "./Product.css";
-function Product({ name, price }) {
-  // console.log(props);
+import {useState} from "react";
+function Product(props) {
+  const[isavailabe, setisavailabe]=useState('yes')
+  function myfun(){
+    setisavailabe("no");
+  }
   return (
     <div className="product">
-      <h3>{name}</h3>
-      <p>Rs {price}</p>
-      {/* <pre>{JSON.stringify(props)}</pre> */}
+      <h3>{props.name}</h3>
+      <p>{props.price}</p>
+      <p>{isavailabe}</p>
+      <button onClick={myfun}>click</button>
+
     </div>
   );
 }
