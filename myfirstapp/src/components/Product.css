@@ -1,5 +1,6 @@
 .product {
-  width: fit-content;
+  /* width: fit-content; */
+  width:300px;
   border: 1px solid white;
   margin: 0 auto;
   margin-bottom: 10px;
