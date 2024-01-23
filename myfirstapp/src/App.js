@@ -1,21 +1,25 @@
 import "./App.css";
+import Product from './components/Product'
+import {useEffect, useState} from 'react';
 function App() {
-  let coountries = [
-    { name: "india", capital: "New Delhi" },
-    { name: "South Africa", capital: "Cape Town" },
-    { name: "New Zealand", capital: "Wellington" },
-  ];
+  const[name, setName]=useState("nazim")
+  const[age, setAge] = useState(35);
+
+  useEffect(()=>{
+    fetch('https://jsonplaceholder.typicode.com/todos/1')
+      .then(response => response.json())
+      .then(json => console.log(json))
+  },[age])
+
   return (
     <div className="App">
-      {coountries.map((element, index) => {
-        return (
-          <div key={index}>
-            <h1>{element.name}</h1>
-            <h2>{element.capital}</h2>
-            <hr />
-          </div>
-        );
-      })}
+          
+          <Product name = "samsung" price="20000"/>
+          <h2>Welcome {name}</h2>         
+           <h2>{age}</h2>
+          <button onClick={()=>{setName("anil")}}> click me </button>
+          <button onClick={()=>{setAge(36)}}> click me </button>
+    
     </div>
   );
 }
