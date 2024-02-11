@@ -1,0 +1,10 @@
+.about {
+  padding: 10px;
+  color: white;
+  background-color: rgb(170, 13, 13);
+  width: fit-content;
+  margin: 0 auto;
+}
+.about h1 {
+  margin-block: 10px;
+}
