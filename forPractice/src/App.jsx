@@ -1,16 +1,20 @@
-import './App.css'
-import Product from './Product'
-import {useState} from 'react';
+import "./App.css";
+import { useRef } from "react";
+
 function App() {
-const [showProduct, setProduct]=useState(false)
+  let pTag = useRef();
+  console.log(pTag.current);
   return (
-    <>     
-      {
-        showProduct?<Product/>:null
-      }
-      <button onClick ={()=>{setProduct(true)}}>Show Product</button> 
-      <button onClick ={()=>{setProduct(false)}}>Hide Product</button>        
+    <>
+      <p ref={pTag}>Hello world</p>
+      <button
+        onClick={() => {
+          pTag.current.style.color = "red";
+        }}
+      >
+        click me
+      </button>
     </>
-  )
+  );
 }
-export default App
+export default App;
