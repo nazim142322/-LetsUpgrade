@@ -1,0 +1,43 @@
+.formRegistration {
+  background-color: rgb(187, 9, 9);
+  padding: 20px;
+  color: white;
+  flex-basis: 350px;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.formRegistration h2 {
+  font-weight: 400;
+}
+.form {
+}
+.input {
+  width: 100%;
+  margin-block: 8px;
+  outline: none;
+  padding: 8px;
+  border: 1px solid gray;
+  border-radius: 6px;
+  font-size: 14px;
+}
+.submitBtn {
+  padding: 8px;
+  border: none;
+  margin-block: 8px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 16px;
+  text-transform: uppercase;
+  width: 50%;
+}
+.submitBtn:hover {
+  background-color: white;
+  color: rgb(187, 9, 9);
+}
+.loginStatus {
+  font-size: 12px;
+  text-align: center;
+  cursor: pointer;
+  letter-spacing: 0.81px;
+}

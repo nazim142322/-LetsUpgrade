@@ -1,0 +1,9 @@
+.container {
+  border: 3px solid green;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(22, 22, 22);
+}
