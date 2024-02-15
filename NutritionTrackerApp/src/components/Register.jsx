@@ -1,33 +1,42 @@
 import styles from "./Register.module.css";
-const Register = () => {
-  console.log(styles);
+import {useState} from 'react';
+const Register = () => { 
+  const[details, setDetails] = useState({
+    name:"",
+    email:"",
+    pass:"",
+    age:""
+  });
+  function handleForm(event){
+    event.preventDefault();
+    setDetails((preObj)=>{
+      return {...preObj, [event.target.name]:event.target.value}
+    })
+  }
+  console.log(details)
   return (
     <div className={styles.formRegistration}>
       <h2>Start Your Fitness</h2>
-      <form className={styles.form}>
+      <form className={styles.form} onSubmit={handleForm}>
         <input
-          type="text"
+          type="text" name="name"
           className={styles.input}
-          placeholder="Enter Name"
-          required
+          placeholder="Enter Name"          
         />
         <input
-          type="Email"
+          type="Email" email="email"
           className={styles.input}
-          placeholder="Enter Email"
-          required
+          placeholder="Enter Email"         
         />
         <input
-          type="password"
+          type="password" pass="password"
           className={styles.input}
           placeholder="Enter password"
-          required
         />
         <input
-          type="number"
+          type="number" age="age"
           className={styles.input}
           placeholder="Enter age"
-          required
         />
         <button className={styles.submitBtn}>Join</button>
       </form>
@@ -35,5 +44,4 @@ const Register = () => {
     </div>
   );
 };
-
 export default Register;

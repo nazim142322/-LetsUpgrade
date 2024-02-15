@@ -9,27 +9,28 @@
 .formRegistration h2 {
   font-weight: 400;
 }
-.form {
-}
+
 .input {
   width: 100%;
-  margin-block: 8px;
+  margin-block: 4px;
   outline: none;
-  padding: 8px;
+  padding: 6px;
   border: 1px solid gray;
   border-radius: 6px;
   font-size: 14px;
 }
 .submitBtn {
-  padding: 8px;
+  padding: 6px;
   border: none;
   margin-block: 8px;
   border-radius: 6px;
   font-weight: bold;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 14px;
+  font-weight:400;
   text-transform: uppercase;
   width: 50%;
+  letter-spacing:.8px;
 }
 .submitBtn:hover {
   background-color: white;
