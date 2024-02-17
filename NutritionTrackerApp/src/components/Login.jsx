@@ -1,21 +1,49 @@
 import styles from "./Login.module.css";
 import { Link } from "react-router-dom";
+import {useState} from 'react';
 function Login() {
+  const[loginDetails, setLoginDetails] = useState({
+    email:"",
+    password:"",
+  })
+  const[message, setMessage]=useState("");
+
+  function handleInput(event){
+    // console.log(event.target.name);
+    // console.log(event.target.value);
+    setLoginDetails((preObj)=>{return{ ...preObj, [event.target.name]:event.target.value.trim()}})
+  }
+  function handleSubmit(event){
+    event.preventDefault();
+    console.log(loginDetails);
+    setLoginDetails({
+      email:"",
+    password:"",
+    })
+    setMessage("login Successfully");   
+  }
   return (
+    <>
     <div className={styles.formLogin}>
       <h2>Login to fitness</h2>
-      <form>
+      <form onSubmit={handleSubmit}>
         <input
           type="email"
-          name="name"
+          name="email"
+          onChange={handleInput}
+          value={loginDetails.email}
           className={styles.input}
           placeholder="Enter email"
+          required
         />
         <input
           type="password"
-          name="pass"
+          name="password"
+          onChange={handleInput}
+          value={loginDetails.password}
           className={styles.input}
           placeholder="Enter password"
+          required
         />
         <button className={styles.submitBtn}>Login</button>
       </form>
@@ -24,8 +52,11 @@ function Login() {
         <Link className={styles.register} to="/">
           Register Now
         </Link>
-      </p>
+      </p>      
     </div>
+    <h3>{message}</h3>
+    </>
+
   );
 }
 export default Login;
