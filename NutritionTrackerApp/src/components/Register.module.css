@@ -2,9 +2,10 @@
   background-color: rgb(187, 9, 9);
   padding: 20px;
   color: white;
-  flex-basis: 350px;
+  width: 350px;
   border-radius: 6px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin: 10px;
 }
 .formRegistration h2 {
   font-weight: 400;
@@ -12,6 +13,7 @@
 
 .input {
   width: 100%;
+  /* width: 400px; */
   margin-block: 4px;
   outline: none;
   padding: 6px;
@@ -51,4 +53,8 @@
   padding: 3px 6px;
   border-radius: 6px;
   font-weight: bold;
+}
+::placeholder {
+  font-weight: 300;
+  letter-spacing: 0.8px;
 }
