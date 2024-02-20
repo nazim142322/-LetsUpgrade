@@ -1,12 +1,14 @@
 import styles from "./Login.module.css";
 import { Link, useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { userContext } from "../contexts/UserContext";
 function Login() {
+  const loggedInData = useContext(userContext); //for login reponse
   const navigate = useNavigate(); //to redirect
   const [loginDetails, setLoginDetails] = useState({
     email: "",
     password: "",
-  });
+  }); //for form handling
   const [message, setMessage] = useState("");
 
   function handleInput(event) {
@@ -25,7 +27,7 @@ function Login() {
     });
     setMessage("login Successfully");
     localStorage.setItem(
-      "nurtify-user",
+      "nutrify-user",
       JSON.stringify({
         message: "login success",
         name: "nazim",
@@ -33,6 +35,12 @@ function Login() {
         userid: "9887n997no7m98",
       })
     ); //we get data after Post Request and storing in local storage for relogin
+    console.log(loggedInData);
+    loggedInData.setLoggedUser({
+      name: "nazim",
+      token: "hlkui9879hkh98789hkl98y9hklh877",
+      userid: "9887n997no7m98",
+    }); // updating state
     navigate("/track"); //redirection in react
   }
   return (
