@@ -2,11 +2,13 @@ import styles from "./App.module.css";
 import Register from "./components/Register";
 import Login from "./components/Login";
 import Track from "./components/Track";
-import { Routes, Route, useNavigate, BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
 import PageNotFound from "./components/PageNotFound";
 import { useEffect, useState } from "react";
 import { userContext } from "./contexts/UserContext";
 import Private from "./components/Private";
+import Demo from "./components/Demo";
+import Logout from "./components/Logout";
 
 function App() {
   // const navigate = useNavigate();
@@ -21,6 +23,7 @@ function App() {
   //   //   navigate("/login");
   //   // }
   // }, []);
+  console.log(loggedUser);
   return (
     <main className={styles.container}>
       <userContext.Provider value={{ loggedUser, setLoggedUser }}>
@@ -28,9 +31,10 @@ function App() {
           <Routes>
             <Route path="/" element={<Register />} />
             <Route path="/login" element={<Login />} />
-            <Route path="/track" element={<Track />} />
+            <Route path="/track" element={<Private Component={Track} />} />
+            <Route path="/demo" element={<Private Component={Demo} />} />
             <Route path="*" element={<PageNotFound />} />
-            <Route path="/private" element={<Private />} />
+            <Route path="/logout" element={<Private Component={Logout} />} />
           </Routes>
         </BrowserRouter>
       </userContext.Provider>

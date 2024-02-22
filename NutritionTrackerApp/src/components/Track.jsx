@@ -1,9 +1,10 @@
-import { useContext } from "react";
-import { userContext } from "../contexts/UserContext";
+import { Link } from "react-router-dom";
 const Track = () => {
-  const userDetails = useContext(userContext);
-  // console.log(userDetails);
-  return <div>Welcome to dashboard</div>;
+  return (
+    <div>
+      Welcome to dashboard <Link to="/demo">demo</Link>
+    </div>
+  );
 };
 
 export default Track;

@@ -8,7 +8,7 @@ function Login() {
   const [loginDetails, setLoginDetails] = useState({
     email: "",
     password: "",
-  }); //for form handling
+  }); //for form data
   const [message, setMessage] = useState(""); //for login message
 
   function handleInput(event) {
@@ -17,14 +17,14 @@ function Login() {
     setLoginDetails((preObj) => {
       return { ...preObj, [event.target.name]: event.target.value.trim() };
     });
-  }
+  } // to get value form form
   function handleSubmit(event) {
     event.preventDefault();
     console.log(loginDetails);
     setLoginDetails({
       email: "",
       password: "",
-    });
+    }); //to empty form again
     setMessage("login Successfully");
     localStorage.setItem(
       "nutrify-user",
@@ -34,13 +34,13 @@ function Login() {
         token: "hlkui9879hkh98789hkl98y9hklh877",
         userid: "9887n997no7m98",
       })
-    ); //we get data after Post Request and storing in local storage for relogin
+    ); //to store response into localStorage for relogin purpose
     loggedInData.setLoggedUser({
       name: "nazim",
       token: "hlkui9879hkh98789hkl98y9hklh877",
       userid: "9887n997no7m98",
-    }); // updating state
-    navigate("/track"); //redirection in react
+    }); // updating state for global access or adding data to context
+    navigate("/track"); //to redirect to a route
   }
   return (
     <>
