@@ -9,7 +9,7 @@ function Login() {
     email: "",
     password: "",
   }); //for form handling
-  const [message, setMessage] = useState("");
+  const [message, setMessage] = useState(""); //for login message
 
   function handleInput(event) {
     // console.log(event.target.name);
@@ -35,7 +35,6 @@ function Login() {
         userid: "9887n997no7m98",
       })
     ); //we get data after Post Request and storing in local storage for relogin
-    console.log(loggedInData);
     loggedInData.setLoggedUser({
       name: "nazim",
       token: "hlkui9879hkh98789hkl98y9hklh877",
