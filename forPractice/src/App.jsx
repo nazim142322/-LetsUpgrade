@@ -1,19 +1,19 @@
-import "./App.css";
-import Product from "./Product";
-import{useState, useEffect, createContext} from 'react';
-export const productContext = createContext();
-function App() {
-  let name = "Samsung";
-  let modelNo ="M30s";
-  const person ={name, modelNo};
-   const[price, setPrice] = useState("20000")
+import React from 'react';
+import {useRef} from 'react';
+const App = () => {
+ 
+  let pTag=useRef();
+  React.useEffect(()=>{
+    console.log(pTag.current)
+ 
+  })  
   return (
-    <>
-      <productContext.Provider value={{person, price, setPrice}}>
-         <h3>useContext and Context API in React</h3>
-         <Product/>
-      </productContext.Provider>  
-    </>
-  );
+    <div>
+     <p ref={pTag}>hello world</p>
+     <button
+        onClick={()=>pTag.current.style.color="red"}> click
+     </button>
+    </div>
+  )
 }
-export default App;
+export default App
