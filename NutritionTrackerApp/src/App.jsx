@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 import { userContext } from "./contexts/UserContext";
 import Private from "./components/Private";
 import Demo from "./components/Demo";
-import Logout from "./components/Logout";
+// import Logout from "./components/Logout";
 
 function App() {
   // const navigate = useNavigate();
@@ -34,7 +34,7 @@ function App() {
             <Route path="/track" element={<Private Component={Track} />} />
             <Route path="/demo" element={<Private Component={Demo} />} />
             <Route path="*" element={<PageNotFound />} />
-            <Route path="/logout" element={<Private Component={Logout} />} />
+            {/* <Route path="/logout" element={<Private Component={Logout} />} /> */}
           </Routes>
         </BrowserRouter>
       </userContext.Provider>

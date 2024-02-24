@@ -4,13 +4,13 @@ import { useContext } from "react";
 
 const Private = (props) => {
   const loggedData = useContext(userContext);
- 
+
   return loggedData.loggedUser !== null ? (
-    <>
+    <div>
       <h3>this is private page</h3>
-      <br />
+
       <props.Component />
-    </>
+    </div>
   ) : (
     <Navigate to="/login" />
   );
