@@ -1,0 +1,13 @@
+.search input {
+  color: red;
+  width: 100%;
+  padding: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid gray;
+}
+.trackcomp {
+  align-items: start;
+}

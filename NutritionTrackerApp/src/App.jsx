@@ -13,7 +13,7 @@ import Demo from "./components/Demo";
 function App() {
   // const navigate = useNavigate();
   const [loggedUser, setLoggedUser] = useState(
-    localStorage.getItem("nutrify-user")
+    JSON.parse(localStorage.getItem("nutrify-user"))
   );
   //   useEffect(() => {
   //   if (localStorage.getItem("nutrify-user") !== null) {
