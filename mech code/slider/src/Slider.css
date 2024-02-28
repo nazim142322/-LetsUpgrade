@@ -13,12 +13,22 @@
 .slider-img img{
     width:100%
 }
+.slider-img img{
+    
+    width:100%;
+    height:auto;
+}
 .nextBtn{
     position:absolute;
     top:50%;
-   
+    right:0;  
+    border:1px solid red; 
+    cursor:pointer;
 }
-
-.slider-img img{
-    width:100%;
+.preBtn{
+    position:absolute;
+    top:50%;
+    left:0;
+    border:1px solid blue;
+    cursor:pointer;
 }
