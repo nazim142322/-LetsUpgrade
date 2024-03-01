@@ -1,33 +1,38 @@
-import React,{useEffect, useState} from 'react'
+import React, { useEffect, useState } from "react";
 
 const Products = () => {
-  const [appData, setAppData]=useState()
-  useEffect(()=>{
+  const [appData, setAppData] = useState();
+  const [productArray, setProductArray] = useState();
+  useEffect(() => {
     fetch(`https://dummyjson.com/carts`)
-    .then(res=>{if(!res.ok){
-              throw Error(res.statusText);
-               };
-               return res.json()})  
-    .then(data=>{setAppData(data)})
-    .catch(error=>alert(error))
-  },[]);
-  let product=appData?.carts[].products;
-  console.log(product)
+      .then((res) => {
+        if (!res.ok) {
+          throw Error(res.statusText);
+        }
+        return res.json();
+      })
+      .then((data) => {
+        setAppData(data);
+      })
+      .catch((error) => alert(error));
+  }, []);
+  appData !== undefined ? console.log(appData.carts) : null;
   return (
     <div>
-      <h3>poduct</h3> 
-      {/* {
-        product!==undefined?product.map((items, index)=>{
-          return(
+      <h3>poduct</h3>
+      {appData !== undefined ? (
+        appData.carts.map((element, index) => {
+          return (
             <div key={index}>
-              <h5>{items.title}</h5>
+              {/* <p>{JSON.stringify(element.products)}</p> */}
+              <p>{`product_id-${element.id}, total-Rs.${element.total}, user id-${element.userId}`}</p>
             </div>
-            
-          )
-        }):<h4>fetching data</h4>
-      }  */}
-      
+          );
+        })
+      ) : (
+        <h2>fetching data</h2>
+      )}
     </div>
-  )
-}
-export default Products
+  );
+};
+export default Products;
