@@ -6,6 +6,7 @@ import { userContext } from "../contexts/UserContext";
 const Track = () => {
   const loggedData = useContext(userContext);
   const token = loggedData.loggedUser.token;
+
   function searchFood(event) {
     let query = event.target.value;
     fetch(`http://localhost:8000/foods/${query}`, {
