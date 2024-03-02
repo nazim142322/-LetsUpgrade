@@ -6,8 +6,13 @@ function App() {
   
   return (
     <>
+      <div className="header">
       <Header/>
-      <Products/>
+      </div>
+      <main>
+         <Products/>
+      </main>
+      
     </>
   )
 }

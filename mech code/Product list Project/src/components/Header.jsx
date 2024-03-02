@@ -1,8 +1,10 @@
 import React from 'react'
 const Header = () => {
   return (
-    <div>Header</div>
+    <nav className="navbar">
+      <div>Home</div>
+      <div>Cart</div>
+    </nav>
   )
 }
-
 export default Header

@@ -1,13 +1,11 @@
 import React, { useEffect, useState } from "react";
-
 const Products = () => {
   const [appData, setAppData] = useState();
-  const [productArray, setProductArray] = useState();
   useEffect(() => {
     fetch(`https://dummyjson.com/carts`)
       .then((res) => {
         if (!res.ok) {
-          throw Error(res.statusText);
+          throw Error("error while loading");
         }
         return res.json();
       })
@@ -18,19 +16,28 @@ const Products = () => {
   }, []);
   appData !== undefined ? console.log(appData.carts) : null;
   return (
-    <div>
-      <h3>poduct</h3>
+    <div className="products">      
       {appData !== undefined ? (
-        appData.carts.map((element, index) => {
+        appData.carts.map((element) => {
           return (
-            <div key={index}>
-              {/* <p>{JSON.stringify(element.products)}</p> */}
-              <p>{`product_id-${element.id}, total-Rs.${element.total}, user id-${element.userId}`}</p>
-            </div>
+            <>           
+             {element.products.map((proArray,key)=>{
+              return( 
+                  <div id ={key} className="card" >
+                      <div className="cardImg">
+                        <img src={proArray.thumbnail} alt={proArray.title} />
+                      </div>                    
+                      <p>{proArray.title}</p>
+                      <p>{`Rs.${proArray.price}`}</p>
+                      <button>Add to Cart</button>                    
+                  </div>     
+                    )
+            })}</>
+            
           );
         })
       ) : (
-        <h2>fetching data</h2>
+        <h2 style={{color:"green"}}>fetching data</h2>
       )}
     </div>
   );
