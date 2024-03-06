@@ -1,19 +1,16 @@
-import './App.css'
-import Header from './components/Header'
-import Products from './components/Products'
+import "./App.css";
+import Header from "./components/Header";
+import Products from "./components/Products";
 function App() {
-
-  
   return (
     <>
       <div className="header">
-      <Header/>
+        <Header />
       </div>
       <main>
-         <Products/>
+        <Products />
       </main>
-      
     </>
-  )
+  );
 }
-export default App
+export default App;

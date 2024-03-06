@@ -1,58 +1,63 @@
-.header{    
-    background-color:rgb(9, 148, 148);
+.header {
+  background-color: rgb(9, 148, 148);
 }
-.navbar{   
-    max-width:1300px;
-    margin:auto;
-    display:flex;
-    justify-content:space-between;
-    padding:16px;    
-    color:white;  
+.navbar {
+  max-width: 1300px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+  color: white;
+}
+.navbar .filter {
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
 }
 /* main{  
     
 } */
-.products{
-    max-width:1300px;
-    margin:auto;
-    /* border:1px solid red; */
-    padding:16px;
-    display:grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap:12px;
-    place-items:center;
+.products {
+  max-width: 1300px;
+  margin: auto;
+  /* border:1px solid red; */
+  padding: 16px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 12px;
+  place-items: center;
 }
-.card{    
-    width:200px;   
-    margin-bottom:8px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    padding:10px;
-    border-radius:12px;
-    display:flex;
-    flex-direction:column;
-    gap:10px;
+.card {
+  width: 200px;
+  margin-bottom: 8px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 10px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
-.card p{
-    text-align:center;
+.card p {
+  text-align: center;
 }
-.card button{
-    border:none;
-    padding:6px;
-    border-radius:5px;
-    background:green;
-    color:white;
+.card button {
+  border: none;
+  padding: 6px;
+  border-radius: 5px;
+  background: green;
+  color: white;
 }
-.card button:hover{
-    cursor:pointer;
-    background:rgb(119, 188, 119);
+.card button:hover {
+  cursor: pointer;
+  background: rgb(119, 188, 119);
 }
 /* .cardImg{
 
 } */
-.cardImg img{
-    width:100%;
-    display:block;
-    aspect-ratio: 3/2; 
-    object-fit:contain;
-    mix-blend-mode:multiply;
+.cardImg img {
+  width: 100%;
+  display: block;
+  aspect-ratio: 3/2;
+  object-fit: contain;
+  mix-blend-mode: multiply;
 }

@@ -1,10 +1,12 @@
-import React from 'react'
+import React from "react";
 const Header = () => {
   return (
     <nav className="navbar">
-      <div>Home</div>
+      <div>
+        <button className="filter">Filter</button> Home
+      </div>
       <div>Cart</div>
     </nav>
-  )
-}
-export default Header
+  );
+};
+export default Header;
