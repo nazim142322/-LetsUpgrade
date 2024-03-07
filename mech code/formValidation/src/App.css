@@ -1,0 +1,51 @@
+.formContainer{
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    background-color: white;;
+    max-width:350px;
+    margin:auto;  
+    padding:20px;
+    margin-top:30px;  
+}
+.formContainer h2{
+    text-align:center;
+    background-color: white;
+}
+.regForm{
+    /* border:1px solid green; */
+    padding:20px;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    background:white;
+}
+.regForm{
+    color:red;
+}
+.fromControl{
+    display:flex;
+    flex-direction:column; 
+    gap:4px;   
+}
+.fromControl span{
+    background:white;
+    font-size:12px;
+}
+.formContainer input{
+    border:1px solid gray;
+    padding:10px;
+    outline-color:gray;
+    border-radius:5px;
+    background:white
+}
+.formContainer button{
+    border:none;
+    background:rgb(202, 199, 199);
+    padding:10px 30px;
+    transition:.5s ease;
+    align-self:center;
+    
+}
+.formContainer button:hover{
+    cursor:pointer;
+    background:rgb(228, 225, 225);
+}
